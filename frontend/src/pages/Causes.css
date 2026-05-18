@@ -1,0 +1,57 @@
+.causes-page { padding-top: 0; }
+
+.causes-hero {
+  min-height: 50vh; display: flex; align-items: center;
+  background: linear-gradient(135deg, #1b4332 0%, #2d6a4f 40%, #40916c 100%);
+  position: relative; text-align: center; padding: 120px 20px 60px;
+}
+
+.causes-hero-overlay {
+  position: absolute; inset: 0;
+  background: rgba(0,0,0,0.1);
+}
+
+.causes-hero .container { position: relative; z-index: 2; }
+.causes-hero h1 { font-size: 3.5rem; color: white; margin-bottom: 20px; animation: fadeInUp 0.8s ease; }
+.causes-hero .highlight { background: linear-gradient(135deg, #e9c46a, #d4a373); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+.causes-hero p { color: rgba(255,255,255,0.85); font-size: 1.2rem; max-width: 600px; margin: 0 auto; animation: fadeInUp 0.8s ease 0.2s both; }
+
+.all-causes { padding: 80px 0; }
+.causes-page-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 30px; }
+
+.cause-page-card {
+  border-radius: 16px; overflow: hidden;
+  box-shadow: var(--shadow-sm); transition: all 0.3s;
+  background: white; border: 1px solid rgba(0,0,0,0.05);
+}
+
+.cause-page-card:hover { transform: translateY(-8px); box-shadow: var(--shadow-lg); }
+
+.cause-page-header { padding: 30px; color: white; display: flex; align-items: center; gap: 15px; }
+.cause-page-icon { font-size: 2rem; }
+.cause-page-header h3 { font-size: 1.3rem; color: white; }
+
+.cause-page-body { padding: 25px 30px 30px; }
+.cause-page-body > p { color: var(--text-gray); font-size: 0.95rem; line-height: 1.7; margin-bottom: 20px; }
+
+.cause-stats-row { display: flex; gap: 30px; margin-bottom: 20px; }
+.cause-stat { text-align: center; }
+.cause-stat strong { display: block; font-size: 1.2rem; color: var(--text-dark); font-family: 'Playfair Display', serif; }
+.cause-stat span { font-size: 0.8rem; color: var(--text-light); }
+
+.cause-donate-btn {
+  width: 100%; text-align: center; display: flex !important;
+  align-items: center; justify-content: center; gap: 8px;
+  padding: 12px !important; font-size: 0.95rem !important;
+}
+
+.causes-cta { padding: 80px 0; background: linear-gradient(135deg, #1b4332, #2d6a4f); }
+.causes-cta-content { text-align: center; }
+.causes-cta-content h2 { color: white; font-size: 2.2rem; margin-bottom: 15px; }
+.causes-cta-content p { color: rgba(255,255,255,0.8); font-size: 1.1rem; max-width: 600px; margin: 0 auto 30px; }
+
+@media (max-width: 768px) {
+  .causes-hero h1 { font-size: 2.5rem; }
+  .causes-page-grid { grid-template-columns: 1fr; }
+  .causes-cta-content h2 { font-size: 1.8rem; }
+}

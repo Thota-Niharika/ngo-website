@@ -1,0 +1,159 @@
+.donate-page { padding-top: 0; }
+
+.donate-hero {
+  min-height: 40vh; display: flex; align-items: center;
+  background: linear-gradient(135deg, #1b4332 0%, #2d6a4f 40%, #40916c 100%);
+  position: relative; text-align: center; padding: 120px 20px 60px;
+}
+
+.donate-hero-overlay { position: absolute; inset: 0; background: rgba(0,0,0,0.1); }
+.donate-hero .container { position: relative; z-index: 2; }
+.donate-hero h1 { font-size: 3.5rem; color: white; margin-bottom: 20px; animation: fadeInUp 0.8s ease; }
+.donate-hero .highlight { background: linear-gradient(135deg, #e9c46a, #d4a373); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+.donate-hero p { color: rgba(255,255,255,0.85); font-size: 1.2rem; max-width: 600px; margin: 0 auto; animation: fadeInUp 0.8s ease 0.2s both; }
+
+.donate-section { padding: 60px 0 80px; }
+.donate-grid { display: grid; grid-template-columns: 1.5fr 1fr; gap: 40px; align-items: start; }
+
+.donate-form-wrapper {
+  background: white; border-radius: 16px; padding: 40px;
+  box-shadow: var(--shadow-md); border: 1px solid rgba(0,0,0,0.05);
+}
+
+.donate-form { display: flex; flex-direction: column; gap: 30px; }
+
+.form-section h3 {
+  font-family: 'Inter', sans-serif; font-size: 1.1rem;
+  font-weight: 600; margin-bottom: 15px; color: var(--text-dark);
+}
+
+.cause-options { display: flex; flex-wrap: wrap; gap: 10px; }
+
+.cause-option {
+  padding: 10px 18px; border-radius: 50px; border: 2px solid #e0e0e0;
+  background: white; cursor: pointer; font-family: 'Inter', sans-serif;
+  font-size: 0.9rem; display: flex; align-items: center; gap: 8px;
+  transition: all 0.3s; color: var(--text-gray);
+}
+
+.cause-option:hover { border-color: var(--primary-light); color: var(--primary); }
+.cause-option.active { border-color: var(--primary); background: rgba(45,106,79,0.08); color: var(--primary); font-weight: 600; }
+
+.amount-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin-bottom: 15px; }
+
+.amount-btn {
+  padding: 15px; border-radius: 12px; border: 2px solid #e0e0e0;
+  background: white; cursor: pointer; font-family: 'Playfair Display', serif;
+  font-size: 1.3rem; font-weight: 600; transition: all 0.3s; color: var(--text-dark);
+}
+
+.amount-btn:hover { border-color: var(--primary-light); background: rgba(45,106,79,0.05); }
+.amount-btn.active { border-color: var(--primary); background: var(--primary); color: white; }
+
+.custom-amount {
+  display: flex; align-items: center; gap: 10px;
+  border: 2px solid #e0e0e0; border-radius: 12px; padding: 5px 15px;
+}
+
+.currency { font-size: 1.3rem; font-weight: 600; color: var(--text-gray); }
+
+.custom-amount input {
+  flex: 1; border: none; outline: none; font-size: 1.1rem;
+  padding: 10px 0; font-family: 'Inter', sans-serif;
+}
+
+.form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 15px; margin-bottom: 15px; }
+
+.form-section input[type="text"],
+.form-section input[type="email"],
+.form-section input[type="tel"],
+.form-section textarea {
+  width: 100%; padding: 14px 18px; border: 2px solid #e0e0e0;
+  border-radius: 12px; font-family: 'Inter', sans-serif;
+  font-size: 0.95rem; outline: none; transition: border-color 0.3s;
+  margin-bottom: 15px; box-sizing: border-box;
+}
+
+.form-section input:focus,
+.form-section textarea:focus { border-color: var(--primary-light); }
+
+.form-section textarea { resize: vertical; min-height: 80px; }
+
+.donate-submit-btn {
+  width: 100%; text-align: center; padding: 16px !important;
+  font-size: 1.1rem !important; display: flex !important;
+  align-items: center; justify-content: center; gap: 10px;
+}
+
+.donate-submit-btn:disabled { opacity: 0.6; cursor: not-allowed; transform: none !important; }
+
+.secure-note {
+  display: flex; align-items: center; justify-content: center;
+  gap: 8px; color: var(--text-light); font-size: 0.85rem;
+}
+
+.donate-sidebar { display: flex; flex-direction: column; gap: 25px; }
+
+.impact-card, .trust-card {
+  background: white; border-radius: 16px; padding: 30px;
+  box-shadow: var(--shadow-sm); border: 1px solid rgba(0,0,0,0.05);
+}
+
+.impact-card h3, .trust-card h3 {
+  font-size: 1.2rem; margin-bottom: 20px; color: var(--text-dark);
+  padding-bottom: 12px; border-bottom: 2px solid rgba(45,106,79,0.1);
+}
+
+.impact-item {
+  display: flex; align-items: center; gap: 15px;
+  padding: 12px 0; border-bottom: 1px solid #f0f0f0;
+}
+
+.impact-item:last-child { border-bottom: none; }
+
+.impact-amount {
+  background: var(--gradient-green); color: white; padding: 6px 14px;
+  border-radius: 8px; font-weight: 700; font-size: 0.9rem; white-space: nowrap;
+}
+
+.impact-desc { color: var(--text-gray); font-size: 0.9rem; }
+
+.trust-card ul { list-style: none; }
+
+.trust-card li {
+  display: flex; align-items: center; gap: 10px;
+  padding: 8px 0; color: var(--text-gray); font-size: 0.95rem;
+}
+
+.trust-card li svg { color: var(--primary); flex-shrink: 0; }
+
+/* Thank You */
+.thank-you-section { padding: 60px 0 80px; }
+
+.thank-you-card {
+  max-width: 600px; margin: 0 auto; text-align: center;
+  background: white; border-radius: 16px; padding: 50px 40px;
+  box-shadow: var(--shadow-lg);
+}
+
+.thank-you-icon { font-size: 4rem; color: var(--primary); margin-bottom: 20px; }
+.thank-you-card h2 { font-size: 2rem; margin-bottom: 20px; color: var(--text-dark); }
+.thank-you-card > p { color: var(--text-gray); line-height: 1.7; margin-bottom: 15px; }
+.receipt-note { font-size: 0.9rem; color: var(--text-light); }
+
+.thank-you-impact {
+  background: rgba(45,106,79,0.05); border-radius: 12px; padding: 25px;
+  margin: 25px 0;
+}
+
+.thank-you-impact h3 { font-size: 1.1rem; margin-bottom: 10px; color: var(--primary-dark); }
+.thank-you-impact p { color: var(--text-gray); font-size: 0.95rem; }
+
+@media (max-width: 768px) {
+  .donate-hero h1 { font-size: 2.5rem; }
+  .donate-grid { grid-template-columns: 1fr; }
+  .form-row { grid-template-columns: 1fr; }
+  .amount-grid { grid-template-columns: repeat(2, 1fr); }
+  .cause-options { flex-direction: column; }
+  .donate-form-wrapper { padding: 25px; }
+}
